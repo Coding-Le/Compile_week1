@@ -1,7 +1,9 @@
 # Compile_week1
-JFlex&amp;Cup&amp;Java
+JFlex&amp;Cup&amp;Java  
+
 part1:
-配置好JFlex、Cup并且实现简单的计算器。
+配置好JFlex、Cup并且实现简单的计算器。 
+
 part2:
 完成Java 程序设计。
 要求：实现中缀表达式到后缀表达式的转换，为InfixToPostfix类实现
