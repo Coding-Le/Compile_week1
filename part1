@@ -1,0 +1,36 @@
+First, you need to download jflex-1.4.3.zip and set up your environment.
+To set up JFlex, you can use one of the following methods:
+first method:
+将 jflex-1.4.3 放到某个目录, 编辑 jflex-1.4.3\bin\jflex.bat:将其中的 JFLEX_HOME 和 JAVA_HOME 设置为自己系统相对应的路径
+set JFLEX_HOME=C:\jflex-1.4.3
+set JAVA_HOME=C:\Java\jdk1.7.0
+在环境变量 PATH 中添加 jflex 的路径:
+PATH=C:\jflex-1.4.3\bin
+second method:
+if you don't care the path, you can input 'sudo apt-get install jflex' into your terminal, it is ok.
+Second, you can use one of the two methods to set up Cup:
+method 1:
+将 java-cup-11a.jar 解压缩,然后将其中的 java-cup 放到 C:\jflex-1.4.3\examples\cup下
+method 2:
+将 java-cup-11a.jar 配置到环境变量中,在 CLASSPATH 后添加该 jar 包的路径:
+CLASSPATH=.;%JAVA_HOME%\lib\tools.jar;%JAVA_HOME%\lib\dt.jar;D:\Study\Comp
+ilersPrinciples\Software\java-cup-11a.jar
+Third, you can use JFlex and Cup to do some easy test:
+To compile, you can input the following command into your terminal:
+cd /home/le/Desktop/compiler/2/jflex-1.4.3/examples/cup //change to adapt your path
+jflex lcalc.flex
+java java_cup.Main < ycalc.cup
+javac Main.java
+To run, you can input the following command into your terminal:
+java Main test.txt
+After doing these things, your will see the figure:
+/home/le/Pictures/Screenshot from 2015-09-25 09:37:10.png
+which means that you have done this job.
+there are many files in the folder, the follwing are some descriptions for them:
+Main.java demo of a main program
+Makefile makefile to compile and test the example
+README this file
+lcalc.flex the lexer spec
+output.good how the output should look like for the test
+ycalc.cup the parser spec
+test.txt sample input for testing
